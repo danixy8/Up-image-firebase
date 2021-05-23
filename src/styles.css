@@ -1,1 +1,113 @@
-/* You can add global styles to this file, and also import other style files */
+
+.main-container{
+  margin-top: 40px;
+}
+
+/* Drop Zone */
+.drop-zone {
+	border: dotted 3px lightgray;
+	opacity: 0.5;
+	color: #666;
+	text-align: center
+}
+
+.file-over {
+	border: dotted 3px dodgerblue;
+}
+
+.table {
+	margin-top: 30px;
+}
+
+.text-green {
+	color: green
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  background-color: #e2e2e2;
+}
+
+.container {
+  width: 80%;
+  margin: 5% auto;
+  background: #fff;
+  padding: 5%;
+}
+
+.file-placeholder {
+  position: relative;
+  cursor: pointer;
+  width: 30% vh;
+  height: 40px;
+  /*
+  you can use the label to trigger the event    */
+  /*
+  or the input file. here I use both but you don't have to   */
+}
+.file-placeholder label {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 400px;
+  height: 40px;
+}
+.file-placeholder label:before {
+  content: "File";
+  position: absolute;
+  top: -15px;
+  left: 10px;
+  background-color: #c7c7c7;
+  padding: 2px 5px;
+  color: #fff;
+}
+.file-placeholder input[type=file] {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 400px;
+  height: 40px;
+  opacity: 0;
+}
+.file-placeholder .file-browse {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+}
+.file-placeholder .file-browse .file-browse-txt {
+  display: block;
+  float: left;
+  line-height: 40px;
+  width: 80%;
+  padding-left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.file-placeholder .file-browse .file-browse-txt.hasValue {
+  background-color: #ededed;
+}
+.file-placeholder .file-browse .browse {
+  display: block;
+  float: left;
+  width: 20%;
+  background-color: #0031E2;
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+}
+
