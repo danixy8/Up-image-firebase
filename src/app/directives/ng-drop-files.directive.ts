@@ -42,6 +42,25 @@ export class NgDropFilesDirective {
 
   }
 
+  @HostListener('change', ['$event'])
+  public onChange( event: any ) {
+
+    const transferencia = event.target.files;
+
+    console.log(transferencia)
+
+    if ( !transferencia ){
+      return;
+    }
+
+    this._extraerArchivos( transferencia );
+
+    this._prevenirDetener(event);
+
+    console.log(this.archivos)
+
+  }
+
   private _getTransferencia( event: any ) {
     return event.dataTransfer ? event.dataTransfer : event.originalEvent.dataTransfer;
   }
@@ -57,7 +76,6 @@ export class NgDropFilesDirective {
         const nuevoArchivo = new FileItem( archivoTemporal );
         this.archivos.push( nuevoArchivo );
 
-        console.log(this.archivos);
       }
 
     }

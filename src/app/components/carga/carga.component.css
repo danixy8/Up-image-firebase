@@ -1,0 +1,57 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,300);
+body {
+  font-family: "Lato", sans-serif;
+}
+
+
+.main-container{
+  margin-top: 40px;
+}
+
+/* Drop Zone */
+.drop-zone {
+	border: dotted 3px lightgray;
+	opacity: 0.5;
+	color: #666;
+	text-align: center;
+  height: 475px
+}
+
+.file-over {
+	border: dotted 3px dodgerblue;
+}
+
+.table {
+	margin-top: 30px;
+}
+
+.text-green {
+	color: green
+}
+
+.row .list-group .active{
+  background-color: #1f48df;
+  border: #1f48df;
+}
+
+
+.fa-file-upload{
+  color: #0031E2;
+}
+
+.fa-check-circle{
+  color: green;
+}
+
+
+.image-upload > input
+{
+    display: none;
+}
+
+.image-upload img
+{
+    width: 80px;
+    cursor: pointer;
+}
+
